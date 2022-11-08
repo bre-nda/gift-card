@@ -1,0 +1,33 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="phone_no" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Session ID</th>
+                <th>Screen ID</th>
+                <th>Screen Desc</th>
+               
+            </tr>
+            <tr *ngFor="let session of sess | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{session.id_auto}}</td>
+                <td>{{session.phone_no}}</td>
+                <td>{{session.ss_id}}</td>
+                <td>{{session.screen_id}}</td>
+                <td>{{session.Screen_description}}</td>
+                
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+
+
+

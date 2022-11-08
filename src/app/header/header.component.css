@@ -1,0 +1,115 @@
+.head{
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+    z-index: 1;
+    transition: all .5s ease;
+    background: #f4f7fa;
+    padding: 1rem 1.5rem 0 1.5rem;
+    position: fixed;
+    top: 0;
+}
+.head-trimmed{
+    width: calc(100% - 16.5625rem);
+    margin-left: 16.5625rem; 
+}
+h5{
+    margin-left: 1rem;
+    color: #1a2741;
+}
+.head-md-screen{
+    width: calc(100% - 5rem);
+    margin-left: 5rem;
+}
+.head-content{
+    background-color: #ffff;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 10px 0 rgb(34 41 47 / 10%);
+    padding: 0.813rem 1.563rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+.search-container{
+    position: relative;
+}
+.search{
+    border: none;
+    height: 2.375rem;
+    padding-left: 2.5rem;
+    padding-right: 1.25rem;
+    background-color: #f3f3f9;
+    box-shadow: none;
+    border-radius: 1.875rem;
+    outline: 0;
+}
+.search-icon{
+    position: absolute;
+    font-size: 1rem;
+    line-height: 2.375rem;
+    left: 0.813rem;
+    top: 0;
+    color: #74788d;
+}
+.head-content-right{
+    display: flex;
+    align-items: center;
+}
+.head-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+.head-menu-item-btn{
+    font-size: 25px;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-left: 5px;
+    outline: 0;
+    color: #495057;
+
+}
+.head-menu-item-btn:hover{
+    background-color: #1a2741;
+    color: #ffff;
+}
+.head-user-avatar-container{
+    margin-left: 20px; 
+}
+.head-user-avatar{
+    position: relative;
+}
+.user-avatar{
+    margin-bottom: -4px;
+    width: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(35 35 35 / 15%);
+    cursor: pointer;
+}
+.circle-indicator{
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   position: absolute;
+   top: -2px;
+   right: -3px;
+   background: #699dfa;
+   
+}
+.search-menu-btn{
+    font-size: 18px;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    outline: 0;
+
+}
+.image{
+    height: 60px;
+}
+

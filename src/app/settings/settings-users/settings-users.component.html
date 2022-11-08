@@ -1,0 +1,32 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number...">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Name</th>
+                <th>Registration Date</th>
+               
+            </tr>
+            <tr *ngFor="let use of users">
+                <td>{{use.id}}</td>
+                <td>{{use.User_Mobile}}</td>
+                <td>{{use.User_Name}}</td>
+                <td>{{use.User_Reg_Date}}</td>
+                
+                
+            </tr> 
+            
+        </table>
+    </div>
+
+
+
+
+

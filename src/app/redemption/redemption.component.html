@@ -1,0 +1,39 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Redeem_Mobile" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Merchant ID</th>
+                <th>Redeem Code</th>
+                <th>Account_No</th>
+                <th>Acc Amount</th>
+                <th>Trans Charge</th>
+                <th>Type</th>
+                <th>Date Created</th>
+                <th>Status</th>
+            </tr>
+            <tr *ngFor="let redeem of redemption | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{redeem.id}}</td>
+                <td>{{redeem.Redeem_Mobile}}</td>
+                <td>{{redeem.Redeem_Merchant_ID}}</td>
+                <td>{{redeem.Redeem_Code}}</td>
+                <td>{{redeem.Redeem_Account_No}}</td>
+                <td>{{redeem.Redeem_Amount}}</td>
+                <td>{{redeem.Redeem_Trans_Charge}}</td>
+                <td>{{redeem.Redeem_Type}}</td>
+                <td>{{redeem.Redeem_Date}}</td>
+                <td>{{redeem.Redeem_Status}}</td>
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+

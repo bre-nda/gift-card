@@ -1,0 +1,29 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Beneficiary_Mobile" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Refer Number</th>
+                <th>Date Created</th>
+            </tr>
+            <tr *ngFor="let share of refer | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{share.id}}</td>
+                <td>{{share.User_Mobile}}</td>
+                <td>{{share.Beneficiary_Mobile}}</td>
+                <td>{{share.Trans_Date}}</td>
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+
+
+

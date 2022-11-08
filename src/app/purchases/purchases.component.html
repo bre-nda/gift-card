@@ -1,0 +1,39 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Acc_Mobile" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>mpesa code</th>
+                <th>Channel</th>
+                <th>redeem code</th>
+                <th>deposit</th>
+                <th>mobile</th>
+                <th>Date Created</th>
+                <th>Balance</th>
+                <th>Acc type</th>
+                <th>Acc Charge</th>
+            </tr>
+            <tr *ngFor="let buyer of buy | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{buyer.id}}</td>
+                <td>{{buyer.Acc_Mpesa_Code}}</td>
+                <td>{{buyer.Acc_Channel}}</td>
+                <td>{{buyer.Acc_Redeem_Code}}</td>
+                <td>{{buyer.Acc_Deposit_Type}}</td>
+                <td>{{buyer.Acc_Mobile}}</td>
+                <td>{{buyer.Acc_TransDate}}</td>
+                <td>{{buyer.Acc_Amount}}</td>
+                <td>{{buyer.Acc_Type}}</td>
+                <td>{{buyer.Acc_Trans_Charge}}</td>
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+

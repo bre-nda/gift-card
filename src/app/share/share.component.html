@@ -1,0 +1,44 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Beneficiary_Mobile" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Sender</th>
+                <th>User</th>
+                <th>Receiver Text</th>
+                <th>Reciever Number</th>
+                <th>MPesa Code</th>
+                <th>Voucher No</th>
+                <th>Sender Mobile</th>
+                <th>Gift Amount</th>
+                <th>Date Created</th>
+                <th>Gift Type</th>
+                <th>Status</th>
+            </tr>
+            <tr *ngFor="let share of sharing | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{share.id}}</td>
+                <td>{{share.Sender_Name}}</td>
+                <td>{{share.User_Name}}</td>
+                <td>{{share.Beneficiary_Special_Text}}</td>
+                <td>{{share.Beneficiary_Mobile}}</td>
+                <td>{{share.Mpesa_Code}}</td>
+                <td>{{share.Gift_Code}}</td>
+                <td>{{share.User_Mobile}}</td>
+                <td>{{share.Gift_Amount}}</td>
+                <td>{{share.Trans_Date}}</td>
+                <td>{{share.Gift_Type}}</td>
+                <td>{{share.Status}}</td>
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+
+

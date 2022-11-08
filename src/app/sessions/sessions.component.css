@@ -1,0 +1,23 @@
+.search{
+    margin-bottom: 2rem;
+    margin-left: 0.1rem;
+    margin-top: 1rem;
+}
+.button{
+    margin-left: 1rem;
+    background-color:#264657 ;
+    color: rgb(247, 243, 241);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.form-control{
+    border: gray 1.5px solid;
+}
+#search{
+    margin-top: 7px;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #264657;
+}

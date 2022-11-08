@@ -1,0 +1,44 @@
+<div class="row  search">
+    <form class="d-flex">
+        <i class="fa-solid fa-magnifying-glass" id="search"></i>
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Out_Mobile_No" (ngModelChange)="Search()">
+        
+    </form>
+</div>
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Phone Number</th>
+                <th>Text</th>
+                <th>Response</th>
+                <th>Trans ID</th>
+                <th></th>Vendor ID
+                <th>Type</th>
+                <th>Msg ID</th>
+                <th>Totals msgs</th>
+                <th>Total Characters</th>
+                <th>Date Created</th>
+            </tr>
+            <tr *ngFor="let mess of message | paginate: {itemsPerPage:6,currentPage:p};">
+                <td>{{mess.Out_ID}}</td>
+                <td>{{mess.Out_Mobile_No}}</td>
+                <td>{{mess.Out_Text}}</td>
+                <td>{{mess.Out_Response}}</td>
+                <td>{{mess.Out_Trans_ID}}</td>
+                <td>{{mess.Out_Vendor_ID}}</td>
+                <td>{{mess.Out_Msg_Type}}</td>
+                <td>{{mess.Out_Msg_ID}}</td>
+                <td>{{mess.Total_Msgs}}</td>
+                <td>{{mess.Total_Characters}}</td>
+                <td>{{mess.Trans_Date}}</td>
+                
+            </tr> 
+            
+        </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
+    </div>
+
+
+
+
