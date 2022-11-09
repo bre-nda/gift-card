@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Friend } from './friend';
-import { RestFriendService } from './rest-friend.service';
+import friend from './file/friend.json'
 
 @Component({
   selector: 'app-friend',
@@ -9,27 +8,40 @@ import { RestFriendService } from './rest-friend.service';
 })
 export class FriendComponent implements OnInit {
 
-  refer:Friend[] = [];
+  
   p: number = 1;
-  Beneficiary_Mobile: any;
+  User_Mobile: any;
 
-  constructor(public rs:RestFriendService) { }
+
+  refer:{
+    id: string,
+    Sender_Name: string,
+    User_Name: string,
+    Beneficiary_Special_Text: string,
+    Beneficiary_Mobile: string,
+    Editing_Field: string,
+    Mpesa_Code: string,
+    Gift_Code: string,
+    User_Mobile: string,
+    Gift_Amount: string,
+    Trans_Date: string,
+    Gift_Type: string,
+    Status: string,
+  }[]=friend;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getGift().subscribe((response) => {
-      this.refer = response;
-     });
   }
 
   Search(){
-    if(this.Beneficiary_Mobile == ''){
+    if(this.User_Mobile == ''){
       this.ngOnInit();
     }else{
       this.refer = this.refer.filter(res =>{
-        return res.Beneficiary_Mobile.toLocaleLowerCase().match(this.Beneficiary_Mobile.toLocaleLowerCase())
+        return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
       })
     };
   };
-
 
 }

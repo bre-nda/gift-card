@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Message } from './message';
-import { RestMessageService } from './rest-message.service';
+import messages from './file/messages.json';
 
 @Component({
   selector: 'app-messages',
@@ -9,16 +8,32 @@ import { RestMessageService } from './rest-message.service';
 })
 export class MessagesComponent implements OnInit {
 
-  message:Message[]=[];
+  
   p: number = 1;
   Out_Mobile_No:any;
 
-  constructor(public rs: RestMessageService) { }
+  message:{
+    Out_ID: string,
+        Trans_Date: string,
+        Out_Mobile_No: string,
+        Out_Text: string,
+        Out_Status: string,
+        Out_Response: string,
+        Out_Msg_Type: string,
+        Out_Trans_ID: string,
+        Out_Processed_Status: string,
+        Out_Vendor_ID: string,
+        Out_Msg_ID: string,
+        Total_Characters: string,
+        Total_Msgs: string,
+        Msg_Content_ID: string,
+
+  }[]=messages
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getMessage().subscribe((response) => {
-      this.message = response;
-     });
+   
   }
 
   Search(){

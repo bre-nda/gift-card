@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="Beneficiary_Mobile" (ngModelChange)="Search()">
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" [(ngModel)]="User_Mobile" (ngModelChange)="Search()">
         
     </form>
 </div>
@@ -12,7 +12,7 @@
                 <th>Phone Number</th>
                 <th>Date Created</th>
             </tr>
-            <tr *ngFor="let share of work | paginate: {itemsPerPage:6,currentPage:p};">
+            <tr *ngFor="let share of working | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{share.id}}</td>
                 <td>{{share.User_Mobile}}</td>
                 <td>{{share.Trans_Date}}</td>

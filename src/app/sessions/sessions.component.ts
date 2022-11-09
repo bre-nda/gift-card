@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestSessionsService } from './rest-sessions.service';
-import { Sessions } from './sessions';
+import session from './file/session.json'
 
 @Component({
   selector: 'app-sessions',
@@ -9,16 +8,22 @@ import { Sessions } from './sessions';
 })
 export class SessionsComponent implements OnInit {
 
-  sess:Sessions[] = [];
+  
   p: number = 1;
   phone_no:any;
 
-  constructor(public rs:RestSessionsService) { }
+  sess:{
+    id_auto: string,
+        id: string,
+        phone_no: string,
+        ss_id: string,
+        screen_id: string,
+        Screen_description: string,
+  }[]=session;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getSessions().subscribe((response) => {
-      this.sess = response;
-     });
   }
 
   Search(){
@@ -30,5 +35,4 @@ export class SessionsComponent implements OnInit {
       })
     };
   };
-
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Balance } from './balance';
-import { RestBalanceService } from './rest-balance.service';
+import  bal  from './file/bal.json'
 
 @Component({
   selector: 'app-balance',
@@ -9,25 +8,29 @@ import { RestBalanceService } from './rest-balance.service';
 })
 export class BalanceComponent implements OnInit {
 
-  bal: Balance[] = [];
+  
   p: number = 1;
   RecipientNumber:any;
-  constructor(public rs: RestBalanceService) { }
+
+  balances:{
+    RecipientNumber: string,
+    Balance: string,}[]=bal;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getBalance().subscribe((response) => {
-      this.bal = response;
-     });
+    
   }
 
   Search(){
     if(this.RecipientNumber == ''){
       this.ngOnInit();
     }else{
-      this.bal = this.bal.filter(res =>{
+      this.balances = this.balances.filter(res =>{
         return res.RecipientNumber.toLocaleLowerCase().match(this.RecipientNumber.toLocaleLowerCase())
       })
     };
   };
 
+  
 }

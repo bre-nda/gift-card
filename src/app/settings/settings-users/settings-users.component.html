@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number...">
+        <input class="form-control me-2" type="text" placeholder="search number..." name="User_Mobile" [(ngModel)]="User_Mobile" (ngModelChange)="Search()">
         
     </form>
 </div>
@@ -14,7 +14,7 @@
                 <th>Registration Date</th>
                
             </tr>
-            <tr *ngFor="let use of users">
+            <tr *ngFor="let use of use | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{use.id}}</td>
                 <td>{{use.User_Mobile}}</td>
                 <td>{{use.User_Name}}</td>
@@ -24,6 +24,7 @@
             </tr> 
             
         </table>
+        <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>
     </div>
 
 

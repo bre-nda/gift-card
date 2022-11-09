@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" name="RecipientNumber" [(ngModel)]="RecipientNumber" (ngModelChange)="Search()">
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" name="RecipientNumber" [(ngModel)]="RecipientNumber" (ngModelChange)="Search()" >
         
     </form>
 </div>
@@ -11,7 +11,7 @@
                 <th>Phone Number</th>
                 <th>Balance</th>
             </tr>
-            <tr *ngFor="let balance of bal | paginate: {itemsPerPage:6,currentPage:p};">
+            <tr *ngFor="let balance of balances  | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{balance.RecipientNumber}}</td>
                 <td>{{balance.Balance}}</td>
             </tr> 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Redemption } from './redemption';
-import { RestRedemptionService } from './rest-redemption.service';
+import redemption from './file/redemption.json'
 
 @Component({
   selector: 'app-redemption',
@@ -9,23 +8,36 @@ import { RestRedemptionService } from './rest-redemption.service';
 })
 export class RedemptionComponent implements OnInit {
 
-  redemption: Redemption[] = [];
+ 
   p: number = 1;
   Redeem_Mobile: any;
 
-  constructor(public rs:RestRedemptionService) { }
+  redeem:{
+    id: string,
+    Redeem_Mobile: string,
+    Redeem_Merchant_ID: string,
+    Editing_Field: string,
+    Redeem_Mpesa_Code: string,
+    Redeem_Code: string,
+    Redeem_Account_No: string,
+    Redeem_Amount: string,
+    Redeem_Trans_Charge: string,
+    Redeem_Type: string,
+    Redeem_Date: string,
+    Redeem_Status: string,
+  }[]=redemption;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getRedemption().subscribe((response) => {
-      this.redemption = response;
-     });
+    
   }
 
   Search(){
     if(this.Redeem_Mobile == ''){
       this.ngOnInit();
     }else{
-      this.redemption = this.redemption.filter(res =>{
+      this.redeem = this.redeem.filter(res =>{
         return res.Redeem_Mobile.toLocaleLowerCase().match(this.Redeem_Mobile.toLocaleLowerCase())
       })
     };

@@ -19,7 +19,7 @@
                 <th>Date Created</th>
                 <th>Status</th>
             </tr>
-            <tr *ngFor="let redeem of redemption | paginate: {itemsPerPage:6,currentPage:p};">
+            <tr *ngFor="let redeem of redeem | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{redeem.id}}</td>
                 <td>{{redeem.Redeem_Mobile}}</td>
                 <td>{{redeem.Redeem_Merchant_ID}}</td>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Contacts } from './contacts';
-import { RestContactsService } from './rest-contacts.service';
+import contact from './file/contact.json'
 
 @Component({
   selector: 'app-contacts',
@@ -9,25 +8,42 @@ import { RestContactsService } from './rest-contacts.service';
 })
 export class ContactsComponent implements OnInit {
 
-  contact:Contacts[] = [];
+  
   p: number = 1;
-  Beneficiary_Mobile:any;
+  User_Mobile:any;
 
-  constructor(public rs:RestContactsService) { }
+
+
+  contancting:{
+    id: string,
+    Sender_Name: string,
+    User_Name: string,
+    Beneficiary_Special_Text: string,
+    Beneficiary_Mobile: string,
+    Editing_Field: string,
+    Mpesa_Code: string,
+    Gift_Code: string,
+    User_Mobile: string,
+    Gift_Amount: string,
+    Trans_Date: string,
+    Gift_Type: string,
+    Status: string,
+
+  }[]=contact;
+
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getContacts().subscribe((response) => {
-      this.contact = response;
-     });
   }
 
 
   Search(){
-    if(this.Beneficiary_Mobile == ''){
+    if(this.User_Mobile == ''){
       this.ngOnInit();
     }else{
-      this.contact = this.contact.filter(res =>{
-        return res.Beneficiary_Mobile.toLocaleLowerCase().match(this.Beneficiary_Mobile.toLocaleLowerCase())
+      this.contancting = this.contancting.filter(res =>{
+        return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
       })
     };
   };

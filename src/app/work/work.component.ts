@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestWorkService } from './rest-work.service';
-import { Work } from './work';
+import work from './file/work.json';
 
 @Component({
   selector: 'app-work',
@@ -9,24 +8,39 @@ import { Work } from './work';
 })
 export class WorkComponent implements OnInit {
 
-  work:Work[] = [];
+  
   p: number = 1;
-  Beneficiary_Mobile: any;
+  User_Mobile: any;
 
-  constructor(public rs:RestWorkService) { }
+  working:{
+    
+    id: string,
+        Sender_Name: string,
+        User_Name: string,
+        Beneficiary_Special_Text: string,
+        Beneficiary_Mobile: string,
+        Editing_Field: string,
+        Mpesa_Code: string,
+        Gift_Code: string,
+        User_Mobile: string,
+        Gift_Amount: string,
+        Trans_Date: string,
+        Gift_Type: string,
+        Status: string,
+  }[]=work;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getGift().subscribe((response) => {
-      this.work = response;
-     });
+    
   }
 
   Search(){
-    if(this.Beneficiary_Mobile == ''){
+    if(this.User_Mobile == ''){
       this.ngOnInit();
     }else{
-      this.work = this.work.filter(res =>{
-        return res.Beneficiary_Mobile.toLocaleLowerCase().match(this.Beneficiary_Mobile.toLocaleLowerCase())
+      this.working = this.working.filter(res =>{
+        return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
       })
     };
   };

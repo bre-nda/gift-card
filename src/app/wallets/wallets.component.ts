@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestWalletService } from './rest-wallet.service';
-import { Wallet } from './wallet';
+import wallet from './file/wallet.json'
 
 @Component({
   selector: 'app-wallets',
@@ -9,23 +8,38 @@ import { Wallet } from './wallet';
 })
 export class WalletsComponent implements OnInit {
   
-  walletts:Wallet[] = [];
+  
   p: number = 1;
-  Beneficiary_Mobile:any;
-  constructor(public rs:RestWalletService) { }
+  User_Mobile:any;
+
+  walletts:{
+    id: string,
+    Sender_Name: string,
+    User_Name: string,
+    Beneficiary_Special_Text: string,
+    Beneficiary_Mobile: string,
+    Editing_Field: string,
+    Mpesa_Code: string,
+    Gift_Code: string,
+    User_Mobile: string,
+    Gift_Amount: string,
+    Trans_Date: string,
+    Gift_Type: string,
+    Status: string,
+  }[]=wallet;
+
+  
+  constructor() { }
 
   ngOnInit(): void {
-    this.rs.getWallet().subscribe((response) => {
-      this.walletts = response;
-     });
   }
 
   Search(){
-    if(this.Beneficiary_Mobile == ''){
+    if(this.User_Mobile == ''){
       this.ngOnInit();
     }else{
       this.walletts = this.walletts.filter(res =>{
-        return res.Beneficiary_Mobile.toLocaleLowerCase().match(this.Beneficiary_Mobile.toLocaleLowerCase())
+        return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
       })
     };
   };

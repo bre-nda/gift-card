@@ -6,6 +6,8 @@ import { SettingsComponent } from './settings.component';
 import { SettingsUsersComponent } from './settings-users/settings-users.component';
 import { SettingsAccessComponent } from './settings-access/settings-access.component';
 import { SettingsPermissionsComponent } from './settings-permissions/settings-permissions.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { SettingsPermissionsComponent } from './settings-permissions/settings-pe
   ],
   imports: [
     CommonModule,
-    SettingsRoutingModule
+    SettingsRoutingModule,
+    FormsModule,
+    NgxPaginationModule
   ]
 })
 export class SettingsModule { }
