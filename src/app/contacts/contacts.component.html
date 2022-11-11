@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number..." name="Beneficiary_Mobile" [(ngModel)]="User_Mobile" (ngModelChange)="Search()">
+        <input class="form-control me-2" type="text" placeholder="search number...">
         
     </form>
 </div>
@@ -14,14 +14,14 @@
                 <th>Reciever Number</th>
                 <th>Date Created</th>
             </tr>
-            <tr *ngFor="let cont of contancting | paginate: {itemsPerPage:6,currentPage:p};">
+            <!-- <tr *ngFor="let cont of contancting | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{cont.id}}</td>
                 <td>{{cont.Sender_Name}}</td>
                 <td>{{cont.User_Name}}</td>
                 <td>{{cont.Beneficiary_Mobile}}</td>
                 <td>{{cont.Trans_Date}}</td>
                 
-            </tr> 
+            </tr>  -->
             
         </table>
         <pagination-controls class="text-center" (pageChange)="p = $event"></pagination-controls>

@@ -43,7 +43,7 @@ input[type=text] {
     outline: 0;
     margin-bottom: 20px;
     padding-left: 0px;
-    color: #ECF0F5;
+    color: #d6d7da;
 }
 input[type=password] {
     background-color: #264657;
@@ -119,4 +119,44 @@ label {
 .alert{
     margin-top: 3rem;
     /* height: 2px; */
+}
+
+@media(max-width:599px){
+    .login-box{
+        width: 15rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-left: -1.8rem;
+        
+        
+    }
+    .login-button{
+        margin-left: -2rem;
+    }
+    
+}
+
+@media(min-width:600px) and (max-width:767px){
+    .login-box{
+       width: 18rem;
+       
+    }
+}
+
+@media(min-width:768px) and (max-width:999px){
+    .login-box{
+        width: 18rem;
+       
+    }
+    .login-button{
+        margin-left: -1.3rem;
+    }
+    
+}
+
+@media(max-width:300px){
+    .login-box{
+        width: 15rem;
+        margin-left: -6rem;
+    }
 }

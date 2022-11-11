@@ -4,7 +4,7 @@
     margin-top: 1rem;
 }
 .button{
-    margin-left: 1rem;
+    margin-left: 10rem;
     background-color:#264657 ;
     color: rgb(247, 243, 241);
     padding-top: 3px;
@@ -20,4 +20,9 @@
     margin-right: 1rem;
     font-size: 1.5rem;
     color: #264657;
+}
+#user{
+    margin-left: 50rem;
+    background-color: #264657;
+    
 }

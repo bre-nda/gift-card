@@ -1,12 +1,17 @@
 .card-text{
     text-align: center;
+    font-weight: 600;
 }
 .card-title{
     text-align: center;
 }
-
-
+.row-2{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 .card{
+    border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(77, 150, 199, 0.2), 0 6px 20px 0 rgba(77, 150, 199, 0.2);
 }
 .button{
@@ -31,3 +36,91 @@ button{
 h5{
     margin-bottom: 2rem;
 }
+
+.icon-1{
+    background-color: #264657;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.icon-2{
+    background-color: #f52e7a;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.icon-3{
+    background-color: #ac0614;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.icon-4{
+    background-color: #f75c1e;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.icconn{
+    margin-right: 1rem;
+    margin-left: 0.8rem;
+    margin-top: 0.9rem;
+    font-size: 22px;
+    
+}
+.line{
+    border: rgb(214, 212, 212) 1px solid;
+}
+
+.image-box-1{
+    background-color: #f52e7a;
+    height: 13rem;
+}
+.image-box-2{
+    background-color: #264657;
+    height: 13rem;
+}
+.image-box-3{
+    background-color: #ac0614;
+    height: 13rem;
+}
+.social{
+    width: 3rem;
+    margin-right: 3rem;
+}
+footer{
+    margin-left: 30rem;
+    margin-top: 2rem;
+}
+.footer-line{
+    border: rgb(212, 208, 208) 1px solid;
+}
+.chartt{
+    margin-left: 3rem;
+    font-size: 10rem;
+    color: #fff;
+}
+
+
+
+@media (max-width:300px){
+   
+}
+@media(min-width:767px) and (max-width:821px){
+    .card{
+        height: 12rem;
+    }
+    #check{
+        margin-bottom: 7rem;
+    }
+}
+

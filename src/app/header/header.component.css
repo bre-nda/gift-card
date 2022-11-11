@@ -113,3 +113,8 @@ h5{
     height: 60px;
 }
 
+@media(max-width:599px){
+    h5{
+        display: none;
+    }
+}
