@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import contact from './file/contact.json'
 
 @Component({
@@ -10,14 +11,23 @@ export class ContactsComponent implements OnInit {
 
   
   p: number = 1;
+  cont: any;
+
+
   
 
 
-  constructor() { }
+  constructor(private apiservice: ApiService) { }
 
   ngOnInit(): void {
+    this.getAvailableContacts();
   }
 
+  getAvailableContacts(){
+    this.apiservice.getAllContacts().subscribe((res)=>{
+      this.cont = res.data;
+    });
+  }
 
   // Search(){
   //   if(this.User_Mobile == ''){

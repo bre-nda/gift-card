@@ -41,6 +41,53 @@ app.get('/Wallet_Balances',(req, res)=>{
     });
 });
 
+// Get all data
+app.get('/gifts',(req, res)=>{
+    let qr = `select * from gifts`;
+    db.query(qr,(err, result)=>{
+        if(err){
+            console.log(err, 'errs');
+        }
+
+        if(result.length>0){
+            res.send({
+                message: 'all gifts data',
+                data: result
+            });
+        }
+    });
+});
+app.get('/gift_redemptions',(req, res)=>{
+    let qr = `select * from gift_redemptions`;
+    db.query(qr,(err, result)=>{
+        if(err){
+            console.log(err, 'errs');
+        }
+
+        if(result.length>0){
+            res.send({
+                message: 'all gifts data',
+                data: result
+            });
+        }
+    });
+});
+
+app.get('/gift_accounts',(req, res)=>{
+    let qr = `select * from gift_accounts`;
+    db.query(qr,(err, result)=>{
+        if(err){
+            console.log(err, 'errs');
+        }
+
+        if(result.length>0){
+            res.send({
+                message: 'all gifts data',
+                data: result
+            });
+        }
+    });
+});
 
 
 
