@@ -2,7 +2,7 @@
   "name": "giftcard",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild":"ng build --prod",
+    "heroku-postbuild":"ng build --configuration production",
     "ng": "ng",
     "start": "node api.js",
     "build": "ng build",
