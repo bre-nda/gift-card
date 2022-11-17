@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import session from './file/session.json'
 
 @Component({
@@ -10,27 +11,27 @@ export class SessionsComponent implements OnInit {
 
   
   p: number = 1;
-  phone_no:any;
+  phone_no!:string;
+  sess: any;
 
-  sess:{
-    id_auto: string,
-        id: string,
-        phone_no: string,
-        ss_id: string,
-        screen_id: string,
-        Screen_description: string,
-  }[]=session;
-
-  constructor() { }
-
+  constructor(private apiservice:ApiService) { }
+  
   ngOnInit(): void {
+    this.getAvailableSession();
   }
+
+  getAvailableSession(){
+    this.apiservice.getAllSessions().subscribe((res)=>{
+      this.sess = res.data;
+    });
+  }
+
 
   Search(){
     if(this.phone_no == ''){
       this.ngOnInit();
     }else{
-      this.sess = this.sess.filter(res =>{
+      this.sess = this.sess.filter((res: { phone_no: string; }) =>{
         return res.phone_no.toLocaleLowerCase().match(this.phone_no.toLocaleLowerCase())
       })
     };

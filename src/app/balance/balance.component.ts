@@ -12,6 +12,8 @@ export class BalanceComponent implements OnInit {
   
   p: number = 1;
   bal: any;
+  RecipientNumber!: string;
+  
   
 
 
@@ -27,15 +29,15 @@ export class BalanceComponent implements OnInit {
     });
   }
 
-  // Search(){
-  //   if(this.RecipientNumber == ''){
-  //     this.ngOnInit();
-  //   }else{
-  //     this.balances = this.balances.filter(res =>{
-  //       return res.RecipientNumber.toLocaleLowerCase().match(this.RecipientNumber.toLocaleLowerCase())
-  //     })
-  //   };
-  // };
+  Search(){
+    if(this.RecipientNumber == ''){
+      this.ngOnInit();
+    }else{
+      this.bal = this.bal.filter((res: { RecipientNumber: string; }) =>{
+        return res.RecipientNumber.toLocaleLowerCase().match(this.RecipientNumber.toLocaleLowerCase())
+      })
+    };
+  };
 
   
 }

@@ -5,14 +5,17 @@
 .card-title{
     text-align: center;
 }
+.row-1{
+    margin-left: 3rem;
+}
 .row-2{
-    margin-top: 2rem;
-    margin-left: 1rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
     margin-bottom: 1rem;
 }
 .card{
     border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(77, 150, 199, 0.2), 0 6px 20px 0 rgba(77, 150, 199, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(53, 96, 124, 0.2), 0 6px 20px 0 rgba(53, 96, 124, 0.2);
 }
 .button{
     text-align: center;
@@ -69,6 +72,31 @@ h5{
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
 }
+.icon-5{
+    background-color: #15a043;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.icon-6{
+    background-color: #f7991e;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.icon-7{
+    background-color: #1e8ef7;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
 
 .icconn{
     margin-right: 1rem;
@@ -113,14 +141,31 @@ footer{
 
 
 @media (max-width:300px){
-   
+   .card{
+    height: 10rem;
+    width: 15rem;
+   }
+   .row-1{
+    margin-left: 0;
+   }
+   .row-2{
+    margin-left: 0.55rem;
+   }
 }
 @media(min-width:767px) and (max-width:821px){
-    .card{
-        height: 12rem;
-    }
+    
     #check{
         margin-bottom: 7rem;
+    }
+    .col-sm-3{
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+    .card{
+        margin-bottom: 2rem;
+    }
+    .row-2{
+        margin-top: 10rem;
     }
 }
 

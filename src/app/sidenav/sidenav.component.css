@@ -196,6 +196,10 @@
     .sidenav{
         padding-bottom: 3rem;
         height: 200vh;
+        
+    }
+    .sidenav-collapsed{
+        width: 14rem;
     }
 
 }

@@ -12,30 +12,33 @@ export class ContactsComponent implements OnInit {
   
   p: number = 1;
   cont: any;
+  User_Mobile!: string;
+
 
 
   
 
 
-  constructor(private apiservice: ApiService) { }
+  constructor(private apiservice:ApiService) { }
 
   ngOnInit(): void {
-    this.getAvailableContacts();
+    this.getAvailableBalance();
   }
 
-  getAvailableContacts(){
+  getAvailableBalance(){
     this.apiservice.getAllContacts().subscribe((res)=>{
       this.cont = res.data;
     });
   }
+  
 
-  // Search(){
-  //   if(this.User_Mobile == ''){
-  //     this.ngOnInit();
-  //   }else{
-  //     this.contancting = this.contancting.filter(res =>{
-  //       return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
-  //     })
-  //   };
-  // };
+  Search(){
+    if(this.User_Mobile == ''){
+      this.ngOnInit();
+    }else{
+      this.cont = this.cont.filter((res: { User_Mobile: string; }) =>{
+        return res.User_Mobile.toLocaleLowerCase().match(this.User_Mobile.toLocaleLowerCase())
+      })
+    };
+  };
 }

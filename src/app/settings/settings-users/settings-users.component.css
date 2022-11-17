@@ -11,6 +11,7 @@
     padding-bottom: 3px;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 8px;
 }
 .form-control{
     border: gray 1.5px solid;
@@ -25,4 +26,72 @@
     margin-left: 50rem;
     background-color: #264657;
     
+}
+
+.btn-edit{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    background-color: #f75c1e;
+    border: #f75c1e;
+    /* padding: 6px; */
+    border-radius: 8px;
+    letter-spacing: 1px;
+    padding-left:12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.btn-detail{
+    background-color: #0c4d15;
+    border: #0c4d15;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    padding-left:12px;
+    padding-right: 12px;
+    color: azure;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.btn-delete{
+    background-color: #ac0614;
+    border: #ac0614;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    padding-left:12px;
+    padding-right: 12px;
+    color: azure;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+
+@media(max-width:599px){
+    .button{
+        margin-left: 28rem;
+        margin-top: -1.9rem;
+    }
+    .btn-edit{
+        margin-left:0.8rem;
+        margin-right: 5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+@media(min-width:726px) and (max-width:913px){
+    .btn-edit{
+        margin-top: 1rem;
+        text-align: center;
+        margin-left: 0.98rem;
+    }
+    .btn-delete{
+        margin-top: 1rem;
+    }
+}
+@media(min-width:1000px) and (max-width:1024px){
+    .btn-delete{
+        margin-top: 1rem;
+    }
 }

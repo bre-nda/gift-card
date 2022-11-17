@@ -123,6 +123,7 @@ label {
 
 @media(max-width:599px){
     .login-box{
+        margin-top: 1rem;
         width: 15rem;
         padding-left: 2rem;
         padding-right: 2rem;

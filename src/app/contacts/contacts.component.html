@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number...">
+        <input class="form-control me-2" type="text" placeholder="search number..." [(ngModel)]="User_Mobile" (ngModelChange)="Search()">
         
     </form>
 </div>
@@ -9,8 +9,9 @@
         <table class="table table-bordered">
             <tr>
                 <th>ID</th>
-                <th>Sender</th>
-                <th>User</th>
+                <th>Sender Name</th>
+                <th>User Name</th>
+                <th>User Number</th>
                 <th>Reciever Number</th>
                 <th>Date Created</th>
             </tr>
@@ -18,6 +19,7 @@
                 <td>{{cont.id}}</td>
                 <td>{{cont.Sender_Name}}</td>
                 <td>{{cont.User_Name}}</td>
+                <td>{{cont.User_Mobile}}</td>
                 <td>{{cont.Beneficiary_Mobile}}</td>
                 <td>{{cont.Trans_Date}}</td>
                 

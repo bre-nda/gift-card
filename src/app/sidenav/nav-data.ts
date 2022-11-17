@@ -37,9 +37,9 @@ export const navbarData: INavbarData[] = [
         label: 'Balance', 
     },
     {
-        routeLink: 'summary',
+        routeLink: 'friend',
         icon: 'fa-solid fa-book',
-        label: 'Summary', 
+        label: 'Refer Friend', 
     },
     {
         routeLink: 'contacts',
@@ -62,23 +62,23 @@ export const navbarData: INavbarData[] = [
                 icon: 'fa-solid fa-user',
                 label: 'Users',
             },
-            {
-                routeLink: 'settings/access',
-                icon: 'fa-solid fa-user',
-                label: 'Access Control',
-                items:[
-                    {
-                        routeLink: 'settings/roles',
-                        icon: 'fa-solid fa-gear',
-                        label: 'Roles',
-                    },
-                    {
-                        routeLink: 'settings/permissions',
-                        icon: 'fa-solid fa-gear',
-                        label: 'Permissions',
-                    }
-                ]
-            }
+            // {
+            //     routeLink: 'settings/access',
+            //     icon: 'fa-solid fa-user',
+            //     label: 'Access Control',
+            //     items:[
+            //         {
+            //             routeLink: 'settings/roles',
+            //             icon: 'fa-solid fa-gear',
+            //             label: 'Roles',
+            //         },
+            //         {
+            //             routeLink: 'settings/permissions',
+            //             icon: 'fa-solid fa-gear',
+            //             label: 'Permissions',
+            //         }
+            //     ]
+            // }
 
         ] 
     },

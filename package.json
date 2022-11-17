@@ -14,7 +14,7 @@
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
-    "@angular/forms": "~12.2.0",
+    "@angular/forms": "^12.2.16",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
@@ -28,6 +28,7 @@
     "ng2-search-filter": "^0.5.1",
     "ngx-bootstrap": "^7.1.2",
     "ngx-pagination": "^6.0.2",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

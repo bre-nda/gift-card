@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import purchases from './file/purchases.json'
 
 @Component({
@@ -9,22 +10,28 @@ import purchases from './file/purchases.json'
 export class PurchasesComponent implements OnInit {
   
   p: number = 1;
-  Acc_Mobile:any;
+  buy:any;
+  Acc_Mobile!: string;
+  
 
-  buy:{
-    id: string, Acc_Mpesa_Code: string, Acc_Channel:string, Acc_Redeem_Code: string,Acc_Deposit_Type: string, Acc_Mobile: string,Acc_TransDate:string, Acc_Amount:string, Acc_Type:string, Acc_Trans_Charge: string
-  }[]=purchases;
-
-  constructor() { }
+  constructor(private apiservice:ApiService) { }
 
   ngOnInit(): void {
+    this.getAvailablePurchase();
   }
+
+  getAvailablePurchase(){
+    this.apiservice.getAllPurchases().subscribe((res)=>{
+      this.buy = res.data;
+    });
+  }
+ 
 
   Search(){
     if(this.Acc_Mobile == ''){
       this.ngOnInit();
     }else{
-      this.buy = this.buy.filter(res =>{
+      this.buy = this.buy.filter((res: { Acc_Mobile: string; }) =>{
         return res.Acc_Mobile.toLocaleLowerCase().match(this.Acc_Mobile.toLocaleLowerCase())
       })
     };

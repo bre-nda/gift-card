@@ -8,6 +8,8 @@ import { SettingsAccessComponent } from './settings-access/settings-access.compo
 import { SettingsPermissionsComponent } from './settings-permissions/settings-permissions.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SettingCreateUserComponent } from '../setting-create-user/setting-create-user.component';
 
 
 @NgModule({
@@ -16,11 +18,14 @@ import { FormsModule } from '@angular/forms';
     SettingsUsersComponent,
     SettingsAccessComponent,
     SettingsPermissionsComponent,
+    SettingCreateUserComponent,
+  
   ],
   imports: [
     CommonModule,
     SettingsRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgxPaginationModule
   ]
 })

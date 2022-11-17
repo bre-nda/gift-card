@@ -110,11 +110,40 @@ h5{
 
 }
 .image{
-    height: 60px;
+    height: 40px;
+    margin-left: -1.7rem;
+    margin-bottom: -1.8rem;
+}
+h5{
+    color: #264657;
+}
+.dash{
+    cursor: pointer;
+    font-weight: bold;
+}
+.dash:hover{
+    color: #ec2f2f;
 }
 
+
+
+
+
 @media(max-width:599px){
-    h5{
+    .logout{
         display: none;
     }
+    .image{
+        margin-top: -2.3rem;
+        font-size: 18px;
+        display: none;
+    }
+    .dash{
+        margin-left: -1.4rem;
+    }
+    .head-menu-item-btn{
+        font-size: 18px;
+        margin-right: -1.47rem;
+    }
+    
 }

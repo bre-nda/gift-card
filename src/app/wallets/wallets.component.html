@@ -10,12 +10,14 @@
             <tr>
                 <th>ID</th>
                 <th>Reciever Number</th>
+                <th>User Number</th>
                 <th>Balance</th>
                 <th>Date Created</th>
             </tr>
             <tr *ngFor="let wallet of walletts | paginate: {itemsPerPage:6,currentPage:p};">
                 <td>{{wallet.id}}</td>
                 <td>{{wallet.Beneficiary_Mobile}}</td>
+                <td>{{wallet.User_Mobile}}</td>
                 <td>{{wallet.Gift_Amount}}</td>
                 <td>{{wallet.Trans_Date}}</td>
             </tr> 

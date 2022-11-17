@@ -4,7 +4,7 @@
         <input class="form-control me-2" type="text" placeholder="search number..." name="User_Mobile" [(ngModel)]="User_Mobile" (ngModelChange)="Search()">
     </form>
     
-        <button routerLink="/user-form" class="button">Create User</button>
+        <button routerLink="/create-user" class="button">Create User</button>
     
 </div>
     <div>
@@ -21,6 +21,11 @@
                 <td>{{use.User_Mobile}}</td>
                 <td>{{use.User_Name}}</td>
                 <td>{{use.User_Reg_Date}}</td>
+                <td>
+                    <button (click)="userDetails(use.id)" class="btn-detail">Details</button>
+                    <button (click)="editDetails(use.id)" class="btn-edit" >Edit</button>
+                    <button (click)="removeUser(use.id)" class="btn-delete">Delete</button>
+                </td>
                 
                 
             </tr> 

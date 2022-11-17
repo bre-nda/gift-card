@@ -1,0 +1,38 @@
+.detail-box{
+    padding: 2rem;
+    margin-top: -1rem;
+    margin-left: 5rem;
+    height: auto;
+    background: #eef6fa;
+    color:#264657;;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 3px 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.detail-title{
+    margin-bottom: 2rem;
+    font-size: 20px;
+    color: rgb(12, 65, 12);
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+@media(max-width:599px){
+    .detail-box{
+        margin-left: -3rem;
+        width: 18rem;
+    }
+}
+@media(min-width:712px) and (max-width:921px){
+    .detail-box{
+        width: 30rem;
+        padding-right: 10rem;
+    }
+}
+@media(max-width:300px){
+    .detail-box{
+        margin-left: -6rem;
+        margin-right: 8rem;
+        width: 15rem;
+    }
+}

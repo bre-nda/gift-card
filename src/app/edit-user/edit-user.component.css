@@ -1,0 +1,47 @@
+.edit-box{
+    padding: 2rem;
+    margin-top: -1rem;
+    margin-left: 5rem;
+    height: auto;
+    background: #eef6fa;
+    color:#264657;;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16), 3px 3px 6px rgba(0, 0, 0, 0.23);
+}
+.edit-title{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+@media(max-width:599px){
+    form{
+        width: 7.9rem;
+    }
+}
+
+@media(max-width:300px){
+    .edit-box{
+        width: 15rem;
+        padding-right: 10rem;
+    }
+    form{
+        width: 10rem;
+    }
+}
+
+@media(min-width:760px) and (max-width:921px){
+    form{
+        width: 100px;
+        
+    }
+    .edit-box{
+        width: 10rem;
+    }
+}
+@media(min-width:1024px){
+    form{
+        width: 240px;
+    }
+}

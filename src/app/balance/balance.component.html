@@ -1,7 +1,7 @@
 <div class="row  search">
     <form class="d-flex">
         <i class="fa-solid fa-magnifying-glass" id="search"></i>
-        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" name="RecipientNumber">
+        <input class="form-control me-2" type="text" placeholder="search number..." name="RecipientNumber" name="RecipientNumber" [(ngModel)]="RecipientNumber" (ngModelChange)="Search()">
         
     </form>
 </div>

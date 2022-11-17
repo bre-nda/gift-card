@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row row-1">
   <div class="col-sm-3">
     <div class="card">
       <div class="icon-1">
@@ -6,7 +6,7 @@
       </div>
       <div class="card-body">
         <h6 class="card-title">Today's Sessions</h6> 
-        <h4 class="card-text">303</h4>
+          <h4 class="card-text">{{sess.length}}</h4>
         <div class="line"></div>
       </div>
     </div>
@@ -18,19 +18,7 @@
       </div>
       <div class="card-body">
         <h6 class="card-title">Today's Users</h6>
-        <h4 class="card-text">400</h4>
-        <div class="line"></div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="icon-3">
-        <i class="fa-solid fa-address-card  icconn"></i>
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">New Clients</h6>
-        <h4 class="card-text">500</h4>
+        <h4 class="card-text">{{use.length}}</h4>
         <div class="line"></div>
       </div>
     </div>
@@ -42,7 +30,7 @@
         </div>
         <div class="card-body">
           <h6 class="card-title">Total Purchases</h6>
-          <h4 class="card-text">600</h4>
+          <h4 class="card-text">{{buy.length}}</h4>
           <div class="line"></div>
         </div>
       </div>
@@ -50,55 +38,50 @@
 </div>
 
 <div class="row row-2">
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     <div class="card">
-      <div class="image-box-1">
-        
+      <div class="icon-5">
+        <i class="fa-solid fa-gift  icconn"></i>
       </div>
       <div class="card-body">
-        <h6 class="card-title">Daily Transactions</h6> 
-        <h4 class="card-text">303</h4>
+        <h6 class="card-title">Total Redemption</h6>
+        <h4 class="card-text">{{redeem.length}}</h4>
         <div class="line"></div>
       </div>
     </div>
   </div>
   
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     <div class="card">
-      <div class="image-box-2">
-        
+      <div class="icon-6">
+        <i class="fa-solid fa-credit-card  icconn"></i>
       </div>
       <div class="card-body">
-        <h6 class="card-title">Completed Purchases</h6>
-        <h4 class="card-text">400</h4>
+        <h6 class="card-title">Balance Check</h6>
+        <h4 class="card-text">{{bal.length}}</h4>
         <div class="line"></div>
       </div>
     </div>
   </div>
   
-  <div class="col-sm-4">
+  <div class="col-sm-3">
     <div class="card">
-      <div class="image-box-3">
-        
+      <div class="icon-7">
+        <i class="fa-sharp fa-solid fa-share-nodes  icconn"></i>
       </div>
       <div class="card-body">
-        <h6 class="card-title">Engagements</h6>
-        <h4 class="card-text">500</h4>
+        <h6 class="card-title">Refer Friend</h6>
+        <h4 class="card-text">{{sharing.length}}</h4>
         <div class="line"></div>
       </div>
     </div>
   </div>
-</div>
 
-<br><br>
 
-<div class="footer-line"></div>
 
-<footer>
-  <img class="social" src="./assets/images/facebook.png" alt="">
-  <img class="social" src="./assets/images/twitter-1.png" alt="">
-  <img class="social" src="./assets/images/Instagram.png" alt="">
-</footer>
+
+
+
 
 
 

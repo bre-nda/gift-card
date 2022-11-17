@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +20,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { SessionsComponent } from './sessions/sessions.component';
 import { HomeComponent } from './home/home.component';
 import { BodyComponent } from './body/body.component';
-import { FormsModule } from '@angular/forms';
+
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 import { WorkComponent } from './work/work.component';
 import { FriendComponent } from './friend/friend.component';
@@ -26,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DetailsComponent } from './details/details.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+
 
 @NgModule({
   declarations: [
@@ -46,17 +51,22 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BodyComponent,
     SublevelMenuComponent,
     WorkComponent,
-    FriendComponent
+    FriendComponent,
+    DetailsComponent,
+    EditUserComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

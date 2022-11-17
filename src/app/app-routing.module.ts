@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BalanceComponent } from './balance/balance.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { DetailsComponent } from './details/details.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { FriendComponent } from './friend/friend.component';
 import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +12,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { PurchasesComponent } from './purchases/purchases.component';
 import { RedemptionComponent } from './redemption/redemption.component';
 import { SessionsComponent } from './sessions/sessions.component';
+import { SettingCreateUserComponent } from './setting-create-user/setting-create-user.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ShareComponent } from './share/share.component';
 import { SummaryComponent } from './summary/summary.component';
@@ -29,6 +32,9 @@ const routes: Routes = [
 {path: 'sessions', component: SessionsComponent},
 {path: 'friend', component:FriendComponent},
 {path: 'work', component:WorkComponent},
+{path: 'create-user', component:SettingCreateUserComponent},
+{path: 'details/:id', component:DetailsComponent},
+{path: 'edit/:id', component:EditUserComponent},
 {
   path: 'settings',
   loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)

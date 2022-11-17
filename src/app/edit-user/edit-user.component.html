@@ -1,0 +1,21 @@
+
+<div class=" col-lg-5 col-md-3 edit-box">
+    <div class="col-lg-12 edit-title">
+        Edit User
+    </div>
+<div style="width: 400px;">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">User name</label>
+            <input type="text" class="form-control" formControlName="User_Name" [(ngModel)]="user.User_Name">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Phone Number</label>
+            <input type="text" class="form-control" formControlName="User_Mobile" [(ngModel)]="user.User_Mobile">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+</div>
