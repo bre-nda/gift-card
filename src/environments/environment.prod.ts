@@ -1,11 +1,11 @@
 export const environment = {
   production: false,
-  apiUrl : 'http://localhost:3000/Wallet_Balances',
-  contUrl : 'http://localhost:3000/gifts',
-  redUrl : 'http://localhost:3000/gift_redemptions',
-  buyUrl : 'http://localhost:3000/gift_accounts',
-  messUrl : 'http://localhost:3000/outgoing_msg',
-  usersUrl : 'http://localhost:3000/users',
-  sessUrl : 'http://localhost:3000/sessions',
+  apiUrl : 'https://YOUDOMAIN/Wallet_Balances',
+  contUrl : 'https://YOUDOMAIN/gifts',
+  redUrl : 'https://YOUDOMAIN/gift_redemptions',
+  buyUrl : 'https://YOUDOMAIN/gift_accounts',
+  messUrl : 'https://YOUDOMAIN/outgoing_msg',
+  usersUrl : 'https://YOUDOMAIN/users',
+  sessUrl : 'https://YOUDOMAIN/sessions',
 
 };
