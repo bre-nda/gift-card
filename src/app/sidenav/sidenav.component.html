@@ -1,6 +1,6 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''"  *ngIf="authenticationService.isAuthenticated">
     <div class="logo-container">
-        <button class="logo" (click)="toggleCollapse()"><img class="tap" src="/assets/images/TAPTAP-GIFT-ICONS-&-codes.png" alt=""></button>
+        <button class="logo" (click)="toggleCollapse()"><img class="tap" src="assets/images/TAPTAP-GIFT-ICONS-&-codes.png" alt=""></button>
         <div class="logo-text" @fadeInOut *ngIf="collapsed">TapTap</div>
         <button class="btn-close" *ngIf="collapsed" (click)="closeSidenav()">
             <i class="fa fa-times close-icon"></i>
