@@ -17,6 +17,136 @@
         <i class="fa-solid fa-user  icconn"></i>
       </div>
       <div class="card-body">
+        <h6 class="card-title">Total Users</h6>
+        <h4 class="card-text">{{use.length}}</h4>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="icon-6">
+        <i class="fa-solid fa-credit-card  icconn"></i>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Balance Check</h6>
+        <h4 class="card-text">{{bal.length}}</h4>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="icon-7">
+        <i class="fa-sharp fa-solid fa-share-nodes  icconn"></i>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Refer Friend</h6>
+        <h4 class="card-text">{{sharing.length}}</h4>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- circles circles -->
+
+
+
+<div class="row row-2 card-circle">
+  <div class="all">
+    <div class="icon-4  purch">
+      <i class="fa-solid fa-cart-shopping  icconn"></i>
+    </div>
+      <div class="card card-1">
+        <div class="skill">
+          <div class="outer">
+            <div class="inner">
+              <div id="number">
+                <h2>{{buy.length}}</h2>
+              </div>
+            </div>
+          </div>
+          
+    
+    
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="160px" height="160px">
+            <defs>
+               <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+               </linearGradient>
+            </defs>
+            <circle  class="circle-1" cx="80" cy="80" r="70" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="line"></div>
+        <h5 class="card-title-1">Total Purchases</h5>
+        
+          
+    
+      </div>
+      
+
+
+    <div class="card card-2">
+      <div class="icon-5 red">
+        <i class="fa-solid fa-gift  icconn"></i>
+      </div>
+      <div class="circles">
+        <div class="outer">
+          <div class="inner">
+            <div id="number">
+              <h2>{{redeem.length}}</h2>
+            </div>
+          </div>
+        </div>
+        
+  
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"  width="160px" height="160px">
+          <defs>
+             <linearGradient id="GradientColor">
+                <stop offset="0%" stop-color="#e91e63" />
+                <stop offset="100%" stop-color="#673ab7" />
+             </linearGradient>
+          </defs>
+          <circle class="circle-2" cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="line"></div>
+      <h5 class="card-title-1">Total Redemption</h5>
+    </div>
+    
+      
+
+  </div>
+  
+</div>
+
+
+
+<!-- <div class="row row-1">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="icon-1">
+        <i class="fa-solid fa-table  icconn"></i>
+      </div>
+      <div class="card-body">
+        <h6 class="card-title">Total Sessions</h6> 
+          <h4 class="card-text">{{sess.length}}</h4>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="icon-2">
+        <i class="fa-solid fa-user  icconn"></i>
+      </div>
+      <div class="card-body">
         <h6 class="card-title">Users</h6>
         <h4 class="card-text">{{use.length}}</h4>
         <div class="line"></div>
@@ -35,9 +165,11 @@
         </div>
       </div>
     </div>
-</div>
+</div> -->
 
-<div class="row row-2">
+
+
+<!-- <div class="row row-2">
   <div class="col-sm-3">
     <div class="card">
       <div class="icon-5">
@@ -84,121 +216,5 @@
 
 
 
-
-
-<!-- 
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <h5 class="card-text">Purchases</h5>
-            <div class="button">
-              <button routerLink="/purchases">View More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <h5 class="card-text">Redemption</h5>
-            <div class="button" id="check">
-              <button routerLink="/redemption">View More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">Wallets</h5>
-              <div class="button">
-                  <button routerLink="/wallets">View More</button>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">Balance Checks</h5>
-              <div class="button" id="check">
-                  <button routerLink="/balance">View More</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-
-  <div class="row  mt-5">
-     
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <h5 class="card-text">Contacts</h5>
-            <div class="button">
-              <button routerLink="/contacts">View More</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">Refer Friend</h5>
-              <div class="button" id="check">
-                  <button routerLink="/friend">View More</button>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">How It Works</h5>
-              <div class="button" id="check">
-                  <button routerLink="/work">View More</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">Share Gift</h5>
-              <div class="button" id="check">
-                  <button routerLink="/share">View More</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-
-<div class="lastcol">
-  <div class="row mt-5">
-      <div class="col-sm-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <h5 class="card-text">Total Sessions</h5>
-              <div class="button" id="check">
-                  <button routerLink="/sessions">View More</button>
-              </div>
-            </div>
-          </div>
-      </div>
-  </div>
-</div>    
-
-
-    
 
  -->

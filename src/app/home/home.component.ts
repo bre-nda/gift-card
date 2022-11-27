@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   redeem: any;
   bal: any;
   sharing: any;
+  diffDay: any;
 
 
   constructor(private apiservice:ApiService) { }
@@ -59,6 +60,27 @@ export class HomeComponent implements OnInit {
     this.apiservice.getAllShares().subscribe((res)=>{
       this.sharing = res.data;
     });
+  }
+
+  calculateDiff(buyDate: { ProductDateCreated: string | number | Date; }){
+    console.log(buyDate.ProductDateCreated)
+    let start = new Date().getTime()
+    let end = new Date(buyDate.ProductDateCreated).getTime()
+    let time = start - end
+    let diffDay = Math.floor(time / 86400000); //day calculate
+    let diffHour = Math.floor((time % 86400000) / 3600000 ); //hour calculate
+    let diffMinute = Math.floor(((time % 86400000) % 3600000) / 60000);  //minute calculate
+
+    console.log('day' ,diffDay)
+    console.log('hour' ,diffHour)
+    console.log('minute' ,diffMinute)
+
+
+    if (diffDay >=1){
+      return diffDay
+    }else {
+      return diffHour
+    }
   }
 
 }

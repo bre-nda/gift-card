@@ -10,6 +10,11 @@ app.use(cors());
 
 app.use (bodyparser.json());
 
+app.use(express.static(path.join(__dirname +'/dist/giftcard')));
+
+// app.use('/*', function(req,res) {
+//     res.sendFile(path.join(__dirname +'/dist/giftcard/index.html'));});
+
 // const express = require('express');
 // const path = require('path');
 // const app = express();
@@ -278,3 +283,5 @@ app.get('/whitelist',(req, res)=>{
 app.listen(3000,()=>{
     console.log('Server running...');
 });
+
+module.exports = app;
